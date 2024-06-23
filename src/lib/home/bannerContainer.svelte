@@ -24,12 +24,7 @@
 	<div id="l-hodingImage">
 		<div style:opacity={$readyrate < 4 ? 0 : 0.5} class="m-overlay"></div>
 		<!-- svelte-ignore a11y-media-has-caption -->
-		<video
-			style:display={$readyrate < 4 || $page.route.id == '/stores' ? 'none' : 'block'}
-			bind:this={video}
-			autoplay
-			loop
-		>
+		<video style:display={$readyrate < 4 ? 'none' : 'block'} bind:this={video} autoplay loop>
 			<source src="/navstatics/Deam Boulevard banner video.mp4" type="video/mp4" />
 		</video>
 		<img
