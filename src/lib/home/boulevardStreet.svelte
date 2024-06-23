@@ -30,11 +30,11 @@
 			margin-top: 20px;
 			margin-bottom: 70px;
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-template-columns: repeat(3, 1fr);
 			gap: 5px;
 			#l-lineup {
 				height: 150px;
-				max-width: 200px;
+				max-width: 150px;
 				width: 80;
 				min-width: 80px;
 				// background-color: #d9d9d9;

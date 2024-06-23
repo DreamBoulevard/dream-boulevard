@@ -68,6 +68,7 @@
 		width: 99%;
 		max-width: 550px;
 		height: 200px;
+		max-height: 150px;
 		margin-bottom: 50px;
 		img {
 			height: 100%;
