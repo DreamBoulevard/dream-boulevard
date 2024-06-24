@@ -1,12 +1,16 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { readyrate } from '$lib/generalStores/bannerStore';
 	import { onMount } from 'svelte';
 
 	let video: HTMLVideoElement;
+	$: vidoStatus = false;
 
 	onMount(() => {
-		readyrate.update((n) => (n = video.readyState));
+		video.addEventListener('canplaythrough', () => {
+			if ($page.url.pathname == '/') {
+				vidoStatus = true;
+			}
+		});
 	});
 </script>
 
@@ -22,13 +26,13 @@
 	</div>
 	<!-- holding image  -->
 	<div id="l-hodingImage">
-		<div style:opacity={$readyrate < 4 ? 0 : 0.5} class="m-overlay"></div>
+		<div style:opacity={!vidoStatus ? 0 : 0.5} class="m-overlay"></div>
 		<!-- svelte-ignore a11y-media-has-caption -->
-		<video style:display={$readyrate < 3 ? 'none' : 'block'} bind:this={video} autoplay loop>
+		<video style:display={vidoStatus ? 'block' : 'none'} bind:this={video} autoplay loop>
 			<source src="/navstatics/Deam Boulevard banner video.mp4" type="video/mp4" />
 		</video>
 		<img
-			style:display={$readyrate < 4 || $page.route.id == '/stores' ? 'block' : 'none'}
+			style:display={!vidoStatus ? 'block' : 'none'}
 			src="/navstatics/bannerholdingimage.jpg"
 			alt="holdingImage"
 		/>

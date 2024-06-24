@@ -5,10 +5,10 @@
 
 <div id="l-modelContainer">
 	<div id="l-model">
-		<img src="/homeStatics/modelInwhite.jpg" alt="modelInwhite" />
+		<img loading="lazy" src="/homeStatics/modelInwhite.jpg" alt="modelInwhite" />
 	</div>
 	<div id="l-model">
-		<img src="/homeStatics/modelInBlue.jpg" alt="modelInBlue" />
+		<img loading="lazy" src="/homeStatics/modelInBlue.jpg" alt="modelInBlue" />
 	</div>
 	<div id="l-model">
 		<img loading="lazy" src="/homeStatics/modelInBlack.jpg" alt="modelInBlack" />

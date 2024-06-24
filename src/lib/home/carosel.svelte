@@ -37,19 +37,19 @@
 	<div class="swiper-wrapper">
 		<!-- Slides -->
 		<div class="swiper-slide">
-			<img src="/homeStatics/c1.jpg" alt="Slide 1" />
+			<img loading="lazy" src="/homeStatics/c1.jpg" alt="Slide 1" />
 		</div>
 		<div class="swiper-slide">
-			<img src="/homeStatics/c2.jpg" alt="Slide 2" />
+			<img loading="lazy" src="/homeStatics/c2.jpg" alt="Slide 2" />
 		</div>
 		<div class="swiper-slide">
-			<img src="/homeStatics/c3.jpg" alt="Slide 3" />
+			<img loading="lazy" src="/homeStatics/c3.jpg" alt="Slide 3" />
 		</div>
 		<div class="swiper-slide">
-			<img src="/homeStatics/c4.jpg" alt="Slide 3" />
+			<img loading="lazy" src="/homeStatics/c4.jpg" alt="Slide 3" />
 		</div>
 		<div class="swiper-slide">
-			<img src="/homeStatics/c5.jpg" alt="Slide 3" />
+			<img loading="lazy" src="/homeStatics/c5.jpg" alt="Slide 3" />
 		</div>
 	</div>
 	<!-- If we need pagination -->
@@ -79,9 +79,12 @@
 		.swiper {
 			width: 99%;
 			height: 400px;
-			min-height: 300px;
+			min-height: 200px;
+			height: 400px;
+			max-height: 450px;
 			max-width: 1280px;
 			margin-bottom: 50px;
+
 			img {
 				height: 100%;
 				width: 99%;

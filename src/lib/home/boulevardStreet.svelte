@@ -2,13 +2,13 @@
 	<div class="m-title">BOULEVARD STREET</div>
 	<div id="l-clothlineup">
 		<div id="l-lineup">
-			<img src="/homeStatics/lineupWhite.jpg" alt="lineupWhite" />
+			<img loading="lazy" src="/homeStatics/lineupWhite.jpg" alt="lineupWhite" />
 		</div>
 		<div id="l-lineup">
-			<img src="/homeStatics/lineupBlue.jpg" alt="lineupWhite" />
+			<img loading="lazy" src="/homeStatics/lineupBlue.jpg" alt="lineupWhite" />
 		</div>
 		<div id="l-lineup">
-			<img src="/homeStatics/lineupBlack.jpg" alt="lineupWhite" />
+			<img loading="lazy" src="/homeStatics/lineupBlack.jpg" alt="lineupWhite" />
 		</div>
 	</div>
 </div>

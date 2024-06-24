@@ -80,7 +80,7 @@
 			justify-content: space-evenly;
 			#l-logo {
 				display: flex;
-				justify-content: space-between;
+				justify-content: start;
 				align-items: center;
 				div {
 					text-align: right;
