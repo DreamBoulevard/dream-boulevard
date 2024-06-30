@@ -6,11 +6,16 @@
 	<div id="l-address">
 		<div>East Legon Accra, Ghana</div>
 		<div>+233 544 089 100</div>
+		<div>dreamboulevardworldwide@gmail.com</div>
 	</div>
 	<div id="l-socials">
-		<img src="/footer/instagram.svg" alt="instagram" />
-		<img src="/footer/twitter.svg" alt="twitter" />
-		<img src="/footer/youtube.svg" alt="youtube" />
+		<a
+			href="https://www.instagram.com/dream_boulevard.www?igsh=MXRvdnJiajhvZG12cg%3D%3D&utm_source=qr#"
+		>
+			<img src="/footer/instagram.svg" alt="instagram" />
+		</a>
+		<!-- <img src="/footer/twitter.svg" alt="twitter" />
+		<img src="/footer/youtube.svg" alt="youtube" /> -->
 	</div>
 </div>
 <div id="l-copyright">© DREAM BOULEVARD</div>
@@ -53,9 +58,16 @@
 			align-items: center;
 			width: 100%;
 			margin-top: 5px;
-			img {
-				height: 40%;
+
+			a {
+				height: 100%;
 				margin: 10px;
+				display: flex;
+				align-items: center;
+				img {
+					height: 40%;
+					margin: 10px;
+				}
 			}
 		}
 		div {

@@ -1,9 +1,21 @@
 <script lang="ts">
+	import { alertboxStatus, alertMessage } from './alertStore';
+
 	let face = 'front';
 	let color = 'white';
 	let name = 'Paradise Tee';
 	let image: HTMLImageElement;
 	$: stage = `/storesStatics/${name}/${color}/${face}.jpg`;
+
+	function activateAlert() {
+		let message =
+			'In app purchase is currently not available please use contact info below to place your order';
+		alertMessage.update((m) => {
+			m = message;
+			return m;
+		});
+		alertboxStatus.set(true);
+	}
 </script>
 
 <svelte:head>
@@ -66,6 +78,7 @@
 			<div class="m-price">
 				<span>GH₵ 50</span>
 			</div>
+			<button on:click={activateAlert}>buy</button>
 		</div>
 	</div>
 </div>
@@ -73,20 +86,19 @@
 <style lang="scss">
 	#l-storeCard {
 		border-radius: 5px;
-		height: 40vh;
-		max-height: 450px;
 		max-width: 200px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
 		padding: 5px;
+
 		.m-product {
-			height: 55%;
+			height: 200px;
 			margin: auto;
-			width: 70%;
+			width: 85%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			box-shadow:
 				rgba(0, 0, 0, 0.07) 0px 1px 2px,
 				rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -113,7 +125,6 @@
 				width: 80%;
 				margin: auto;
 				gap: 5px;
-
 				.m-front {
 					background-color: #f0f0f0;
 					display: flex;
@@ -121,19 +132,19 @@
 					align-items: center;
 					cursor: pointer;
 					height: 80%;
+					margin-top: 10px;
 					img {
 						width: 80%;
 					}
 				}
 				.m-back {
 					background-color: #f0f0f0;
+					margin-top: 10px;
 					cursor: pointer;
-
 					display: flex;
 					justify-content: center;
 					align-items: center;
 					height: 80%;
-
 					img {
 						width: 80%;
 					}
@@ -172,6 +183,7 @@
 				.m-name {
 					display: flex;
 					justify-content: center;
+					font-weight: bold;
 					span {
 						font-size: 20px;
 						margin: auto;
@@ -181,10 +193,22 @@
 					display: flex;
 					justify-content: center;
 					span {
-						font-size: 15px;
+						font-weight: 200;
 						margin: auto;
 						font-family: 'Open Sans', sans-serif;
 					}
+				}
+				button {
+					width: 90%;
+					height: 60px;
+					border: none;
+					font-weight: bold;
+					color: whitesmoke;
+					background-color: black;
+					border-radius: 5px;
+					margin-left: 10px;
+					margin-top: 5px;
+					cursor: pointer;
 				}
 			}
 		}
@@ -215,7 +239,7 @@
 				}
 			}
 			.l-description {
-				height: 25%;
+				height: 30%;
 				width: 95%;
 				margin: auto;
 				display: grid;
@@ -292,6 +316,18 @@
 							margin: auto;
 							font-family: 'Open Sans', sans-serif;
 						}
+					}
+					button {
+						width: 70px;
+						height: 30px;
+
+						font-weight: bold;
+						color: whitesmoke;
+						background-color: black;
+						border-radius: 5px;
+						margin-left: 10px;
+						margin-top: 5px;
+						cursor: pointer;
 					}
 				}
 			}

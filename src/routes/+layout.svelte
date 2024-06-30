@@ -1,4 +1,9 @@
+<script>
+	import Alertbox from '$lib/alertbox.svelte';
+</script>
+
 <div id="l-pagerWraaper">
+	<Alertbox />
 	<div id="l-contentWrapper">
 		<slot />
 	</div>
