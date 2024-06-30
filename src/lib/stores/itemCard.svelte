@@ -28,6 +28,9 @@
 	<div class="m-product">
 		<img bind:this={image} src={stage} alt={name} />
 	</div>
+	<div id="m-name">
+		<span>{name}</span>
+	</div>
 	<div class="l-description">
 		<div id="l-varients">
 			<div id="l-faces">
@@ -72,13 +75,13 @@
 			</div>
 		</div>
 		<div id="l-name">
-			<div class="m-name">
+			<!-- <div class="m-name">
 				<span>{name}</span>
-			</div>
+			</div> -->
 			<div class="m-price">
 				<span>GH₵ 400</span>
 			</div>
-			<button on:click={activateAlert}>buy</button>
+			<button on:click={activateAlert}>Buy</button>
 		</div>
 	</div>
 </div>
@@ -90,7 +93,6 @@
 		display: flex;
 		flex-direction: column;
 		padding: 5px;
-
 		.m-product {
 			height: 200px;
 			margin: auto;
@@ -98,7 +100,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
 			box-shadow:
 				rgba(0, 0, 0, 0.07) 0px 1px 2px,
 				rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -109,6 +110,13 @@
 			img {
 				width: 80%;
 			}
+		}
+		#m-name {
+			text-align: center;
+			font-size: 20px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			font-weight: bolder;
 		}
 		.l-description {
 			height: 35%;
@@ -180,20 +188,13 @@
 				flex-direction: column;
 				justify-content: space-around;
 				height: 80%;
-				.m-name {
-					display: flex;
-					justify-content: center;
-					font-weight: bold;
-					span {
-						font-size: 20px;
-						margin: auto;
-					}
-				}
+
 				.m-price {
 					display: flex;
 					justify-content: center;
 					span {
-						font-weight: 200;
+						font-size: 20px;
+						font-weight: bold;
 						margin: auto;
 						font-family: 'Open Sans', sans-serif;
 					}
@@ -202,7 +203,8 @@
 					width: 90%;
 					height: 60px;
 					border: none;
-					font-weight: bold;
+					font-size: 20px;
+					font-weight: bolder;
 					color: whitesmoke;
 					background-color: black;
 					border-radius: 5px;
@@ -244,12 +246,10 @@
 				margin: auto;
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-
 				#l-faces {
 					display: grid;
 					grid-template-columns: 1fr 1fr;
 					height: 70%;
-
 					.m-front {
 						background-color: #f0f0f0;
 						display: flex;
@@ -300,19 +300,14 @@
 					flex-direction: column;
 					justify-content: space-around;
 					height: 100%;
-					.m-name {
-						display: flex;
-						justify-content: center;
-						span {
-							font-size: 1em;
-							margin: auto;
-						}
-					}
+
 					.m-price {
 						display: flex;
 						justify-content: center;
+
 						span {
-							font-size: 1.2em;
+							font-size: 1em;
+							font-weight: bold;
 							margin: auto;
 							font-family: 'Open Sans', sans-serif;
 						}
