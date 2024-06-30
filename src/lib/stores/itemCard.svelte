@@ -76,7 +76,7 @@
 				<span>{name}</span>
 			</div>
 			<div class="m-price">
-				<span>GH₵ 50</span>
+				<span>GH₵ 400</span>
 			</div>
 			<button on:click={activateAlert}>buy</button>
 		</div>
